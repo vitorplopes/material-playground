@@ -1,5 +1,5 @@
-import * as fromTodos from "../actions/todos.action";
-import {Todo} from "@app/todos/models/todo.model";
+import * as fromTodos from '../actions/todos.action';
+import {Todo} from '@app/todos/models/todo.model';
 
 export interface TodoState {
 	entities: { [id: number]: Todo };
@@ -24,12 +24,12 @@ export function reducer(state = initialState,
 		}
 
 		case fromTodos.LOAD_TODOS_SUCCESS: {
-			const todos = action.payload;
+			const todos = action.payload as Todo[];
 
 			const entities = todos.reduce(
-					(entities: { [id: number]: Todo }, todo: Todo) => {
+					(entitiess: { [id: number]: Todo }, todo: Todo) => {
 						return {
-							...entities,
+							...entitiess,
 							[todo.id]: todo,
 						};
 					},
@@ -51,6 +51,19 @@ export function reducer(state = initialState,
 				...state,
 				loading: false,
 				loaded: false,
+			};
+		}
+
+		case fromTodos.CREATE_TODO_SUCCESS: {
+			const todo = action.payload as Todo;
+			const entities = {
+				...state.entities,
+				[todo.id]: todo,
+			};
+
+			return {
+				...state,
+				entities,
 			};
 		}
 	}
