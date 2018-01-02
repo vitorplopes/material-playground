@@ -1,5 +1,6 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CordovaService} from "@app/cordova.service";
 
 import {SplashScreen} from "@ionic-native/splash-screen";
@@ -23,6 +24,7 @@ export const metaReducers: MetaReducer<any>[] = !environment.production ? [store
 	],
 	imports: [
 		BrowserModule,
+		BrowserAnimationsModule,
 		AppRoutingModule,
 		StoreModule.forRoot({}, {metaReducers}),
 		EffectsModule.forRoot([]),
