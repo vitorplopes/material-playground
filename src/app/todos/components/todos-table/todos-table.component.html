@@ -1,0 +1,13 @@
+<table>
+
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Task</th>
+    </tr>
+
+    <tr *ngFor="let todo of todos">
+        <td>{{todo.id}}</td>
+        <td>{{todo.task}}</td>
+    </tr>
+
+</table>
