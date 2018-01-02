@@ -11,8 +11,4 @@ export class HomeComponent {
 	constructor(private router: Router) {
 
 	}
-
-	goToTodosList() {
-		this.router.navigateByUrl('/core/todos/list');
-	}
 }
