@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import * as fromServices from './services';
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
@@ -8,13 +7,13 @@ import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {effects, reducers} from '@app/todos/store';
 import {TodosFormComponent} from './components/todos-form/todos-form.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
+import {SharedModule} from '@shared/shared.module';
 
 @NgModule({
 	imports: [
-		CommonModule,
-		FormsModule,
 		TodosRoutingModule,
+		SharedModule,
 		StoreModule.forFeature('todos', reducers),
 		EffectsModule.forFeature(effects),
 		ReactiveFormsModule

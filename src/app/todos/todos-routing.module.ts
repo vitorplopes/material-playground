@@ -1,10 +1,10 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 // containers
-import * as fromContainers from "./containers";
+import * as fromContainers from './containers';
 
 const routes: Routes = [
-	{path: "", component: fromContainers.TodosListComponent}
+	{path: 'list', component: fromContainers.TodosListComponent}
 ];
 
 @NgModule({

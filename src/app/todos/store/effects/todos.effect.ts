@@ -26,7 +26,6 @@ export class TodosEffects {
 			})
 	);
 
-
 	@Effect()
 	createTodo$ = this.actions$.ofType(todosActions.CREATE_TODO).pipe(
 			map((action: todosActions.CreateTodo) => action.payload),
