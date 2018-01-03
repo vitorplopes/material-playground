@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import 'app/todos/components/todos-form/todos-form.theme';
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
 @import url('//fonts.googleapis.com/icon?family=Roboto');
 
@@ -12,6 +13,7 @@
 .app-theme {
 	// use our theme with angular-material-theme mixin
 	@include angular-material-theme($app-theme);
+	@include todos-form-component-theme($app-theme);
 }
 
 body {
