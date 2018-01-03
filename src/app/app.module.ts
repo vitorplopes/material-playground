@@ -7,6 +7,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import {CoreModule} from '@app/core/core.module';
 
 @NgModule({
 	declarations: [
@@ -15,7 +16,8 @@ import {AppComponent} from './app.component';
 	imports: [
 		AppRoutingModule,
 		BrowserModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		CoreModule
 	],
 	providers: [
 		CordovaService,
