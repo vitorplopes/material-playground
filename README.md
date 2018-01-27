@@ -54,13 +54,11 @@ To update Angular CLI to a new version, you must update both the global package 
 
 * `npm uninstall -g @angular/cli`
 * `npm cache clean`
-
-#### if npm version is > 5 then use `npm cache verify` to avoid errors (or to avoid using --force)
-`npm install -g @angular/cli@latest`
+* if npm version is > 5 then use `npm cache verify` to avoid errors (or to avoid using --force)
+* `npm install -g @angular/cli@latest`
 
 ### Local project package:
 
 * `rm -rf node_modules dist # use rmdir /S/Q node_modules dist in Windows Command Prompt; use rm -r -fo node_modules,dist in Windows PowerShell`
 * `npm install --save-dev @angular/cli@latest`
 * `npm install`
-
