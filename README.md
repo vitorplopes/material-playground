@@ -59,6 +59,6 @@ To update Angular CLI to a new version, you must update both the global package 
 
 ### Local project package:
 
-* `rm -rf node_modules dist # use rmdir /S/Q node_modules dist in Windows Command Prompt; use rm -r -fo node_modules,dist in Windows PowerShell`
+* `rm -rf node_modules dist` # use `rmdir /S/Q node_modules dist` in Windows Command Prompt; use `rm -r -fo node_modules,dist` in Windows PowerShell`
 * `npm install --save-dev @angular/cli@latest`
 * `npm install`
