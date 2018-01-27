@@ -45,19 +45,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Updating Angular CLI
 If you're using Angular CLI 1.0.0-beta.28 or less, you need to uninstall angular-cli package. It should be done due to changing of package's name and scope from angular-cli to @angular/cli:
 
-`npm uninstall -g angular-cli`
-`npm uninstall --save-dev angular-cli`
+* `npm uninstall -g angular-cli`
+* `npm uninstall --save-dev angular-cli`
+
 To update Angular CLI to a new version, you must update both the global package and your project's local package.
 
-Global package:
+### Global package:
 
-`npm uninstall -g @angular/cli`
-`npm cache clean`
-# if npm version is > 5 then use `npm cache verify` to avoid errors (or to avoid using --force)
-`npm install -g @angular/cli@latest
+* `npm uninstall -g @angular/cli`
+* `npm cache clean`
 
-Local project package:
+#### if npm version is > 5 then use `npm cache verify` to avoid errors (or to avoid using --force)
+`npm install -g @angular/cli@latest`
 
-`rm -rf node_modules dist # use rmdir /S/Q node_modules dist in Windows Command Prompt; use rm -r -fo node_modules,dist in Windows PowerShell`
-`npm install --save-dev @angular/cli@latest`
-`npm install`
+### Local project package:
+
+* `rm -rf node_modules dist # use rmdir /S/Q node_modules dist in Windows Command Prompt; use rm -r -fo node_modules,dist in Windows PowerShell`
+* `npm install --save-dev @angular/cli@latest`
+* `npm install`
+
